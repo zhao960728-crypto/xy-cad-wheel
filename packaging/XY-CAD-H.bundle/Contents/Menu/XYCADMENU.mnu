@@ -1,0 +1,13 @@
+***MENUGROUP=XYCADMENU
+
+***POP1
+[小阳CAD轮盘(&X)]
+[打开轮盘(&O)]XYLP
+[轮盘设置...(&S)]XYLPSZ
+[输入法设置...(&I)]XYLPIME
+[图纸并合...(&M)]XYMERGEDWG
+[--]
+[刷新命令库(&R)]XYREFRESHCMDS
+[本地命令恢复(&L)]XYRESTORELOCALCMDS
+[修复顶部菜单(&M)]XYLPMENU
+[运行自检(&T)]XYLPZJ

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>UiPreview</AssemblyName>
+    <PlatformTarget>x64</PlatformTarget>
+    <PluginAssemblyPath Condition="'$(PluginAssemblyPath)' == ''">../../src/XiaoYang.AutoCADPlugin/bin/$(Configuration)/net8.0-windows/MrZ.XiaoYangRadialMenu.AutoCAD2026.dll</PluginAssemblyPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MrZ.XiaoYangRadialMenu.AutoCAD2026"><HintPath>$(PluginAssemblyPath)</HintPath><Private>true</Private></Reference>
+    <Content Include="../../src/XiaoYang.AutoCADPlugin/Resources/*.png" Link="Contents/Resources/Contact/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1 @@
+PASS 4127 checks; 1024 icons; 1024 distinct PNG files.

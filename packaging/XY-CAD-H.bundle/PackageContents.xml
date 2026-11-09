@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationPackage SchemaVersion="1.0" AutodeskProduct="AutoCAD" Name="小阳CAD轮盘插件" Description="支持固定模板导入、快捷命令占用查询、批量分类、轮盘备份和解压目录安装" AppVersion="2.2.0.84" Author="小阳" Helpfile="./功能介绍及使用说明.txt" ProductCode="{5110C96A-49B4-415C-8829-773CF54A3D45}" UpgradeCode="{65CA0EBD-038A-4C07-964D-A49DA1926445}">
+  <CompanyDetails Name="Mr.Z" />
+  <Components Description="AutoCAD 2010 x64 (.NET Framework 3.5)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R18.0" SeriesMax="R18.0" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/NetFramework35/MrZ.XiaoYangRadialMenu.AutoCAD2010.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2011 x64 (.NET Framework 3.5)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R18.1" SeriesMax="R18.1" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/NetFramework35/MrZ.XiaoYangRadialMenu.AutoCAD2011.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2012 x64 (.NET Framework 3.5)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R18.2" SeriesMax="R18.2" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/NetFramework35/MrZ.XiaoYangRadialMenu.AutoCAD2012.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2013 x64 (.NET Framework 4.8)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R19.0" SeriesMax="R19.0" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/NetFramework48/MrZ.XiaoYangRadialMenu.AutoCAD2013.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2014 x64 (.NET Framework 4.8)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R19.1" SeriesMax="R19.1" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/NetFramework48/MrZ.XiaoYangRadialMenu.AutoCAD2014.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2015 x64 (.NET Framework 4.8)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R20.0" SeriesMax="R20.0" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/NetFramework48/MrZ.XiaoYangRadialMenu.AutoCAD2015.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2016 x64 (.NET Framework 4.8)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R20.1" SeriesMax="R20.1" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/NetFramework48/MrZ.XiaoYangRadialMenu.AutoCAD2016.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2017 x64 (.NET Framework 4.8)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R21.0" SeriesMax="R21.0" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/NetFramework48/MrZ.XiaoYangRadialMenu.AutoCAD2017.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2018 x64 (.NET Framework 4.8)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R22.0" SeriesMax="R22.0" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/NetFramework48/MrZ.XiaoYangRadialMenu.AutoCAD2018.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2019 x64 (.NET Framework 4.8)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R23.0" SeriesMax="R23.0" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/NetFramework48/MrZ.XiaoYangRadialMenu.AutoCAD2019.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2020 x64 (.NET Framework 4.8)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R23.1" SeriesMax="R23.1" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/NetFramework48/MrZ.XiaoYangRadialMenu.AutoCAD2020.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2021-2024 x64 (.NET Framework 4.8)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R24.0" SeriesMax="R24.3" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/NetFramework48/MrZ.XiaoYangRadialMenu.AutoCAD2021-2024.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2025 x64 (.NET 8)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R25.0" SeriesMax="R25.0" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/Net8/MrZ.XiaoYangRadialMenu.AutoCAD2025.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2026 x64">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R25.1" SeriesMax="R25.1" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/Net8/MrZ.XiaoYangRadialMenu.AutoCAD2026.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+  <Components Description="AutoCAD 2027 x64 (.NET 10)">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R26.0" SeriesMax="R26.0" />
+    <ComponentEntry AppName="XiaoYangCADRadialMenu" AppDescription="小阳CAD轮盘插件" ModuleName="./Contents/Net10/MrZ.XiaoYangRadialMenu.AutoCAD2027.dll">
+      <LoadReasons LoadOnAutoCADStartup="False" LoadOnCommandInvocation="True" />
+      <Commands GroupName="XYCAD">
+        <Command Global="XYLP" Local="XYLP" />
+        <Command Global="XYLPSZ" Local="XYLPSZ" />
+        <Command Global="XYLPZJ" Local="XYLPZJ" />
+        <Command Global="XYREFRESHCMDS" Local="XYREFRESHCMDS" />
+        <Command Global="XYRESTORELOCALCMDS" Local="XYRESTORELOCALCMDS" />
+        <Command Global="XYLPMENU" Local="XYLPMENU" />
+        <Command Global="XYLPSTART" Local="XYLPSTART" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+</ApplicationPackage>

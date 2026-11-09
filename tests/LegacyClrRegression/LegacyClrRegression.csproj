@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net35</TargetFramework><UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>UiPreview</AssemblyName><LangVersion>latest</LangVersion><Nullable>disable</Nullable>
+    <PlatformTarget Condition="'$(PlatformTarget)' == ''">x64</PlatformTarget><EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <LegacyYear Condition="'$(LegacyYear)' == ''">2010</LegacyYear>
+    <KernelDirectory Condition="'$(KernelDirectory)' == ''">../../src/XiaoYang.AutoCADPlugin.AutoCAD$(LegacyYear)/bin/Release/net35</KernelDirectory>
+    <LegacyApiYear Condition="'$(LegacyYear)' == '2012'">2011</LegacyApiYear>
+    <LegacyApiYear Condition="'$(LegacyApiYear)' == ''">$(LegacyYear)</LegacyApiYear>
+    <DefineConstants Condition="'$(PlatformTarget)' == 'x86'">$(DefineConstants);WIN32_REGRESSION</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Reference Include="MrZ.XiaoYangRadialMenu.AutoCAD$(LegacyYear)"><HintPath>$(KernelDirectory)/MrZ.XiaoYangRadialMenu.AutoCAD$(LegacyYear).dll</HintPath><Private>true</Private></Reference>
+    <PackageReference Include="Theraot.Core" Version="3.2.11" />
+    <PackageReference Include="AutoCAD-$(LegacyApiYear).Net.Base" Version="1.0.0" PrivateAssets="all" ExcludeAssets="runtime" />
+    <Content Include="../../src/XiaoYang.AutoCADPlugin/Resources/*.png" Link="Contents/Resources/Contact/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

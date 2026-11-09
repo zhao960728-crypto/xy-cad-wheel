@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <NoWarn>CS0067;CS0649;CS8632</NoWarn>
+    <SourceRoot Condition="'$(SourceRoot)' == ''">../../src/XiaoYang.AutoCADPlugin</SourceRoot>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="LegacyImeLifecycleProgram.cs" />
+    <Compile Include="$(SourceRoot)/ImeAutoSwitchService.cs" Link="ImeAutoSwitchService.cs" />
+    <Compile Include="../../src/XiaoYang.AutoCADPlugin/ImeSwitchConfig.cs" Link="ImeSwitchConfig.cs" />
+    <Compile Include="../../src/XiaoYang.AutoCADPlugin/ImeCommandCatalog.cs" Link="ImeCommandCatalog.cs" />
+    <Compile Include="../../src/XiaoYang.AutoCADPlugin/ImeTextEditPolicy.cs" Link="ImeTextEditPolicy.cs" />
+    <Compile Include="$(SourceRoot)/RadialOverlayHost.cs" Link="RadialOverlayHost.cs" />
+    <Compile Include="$(SourceRoot)/MouseWheelTrigger.cs" Link="MouseWheelTrigger.cs" />
+    <Compile Include="../../src/XiaoYang.AutoCADPlugin/TriggerModes.cs" Link="TriggerModes.cs" />
+  </ItemGroup>
+</Project>

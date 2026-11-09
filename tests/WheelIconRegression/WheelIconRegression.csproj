@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../src/XiaoYang.AutoCADPlugin/WheelIconCatalog.cs" Link="WheelIconCatalog.cs" />
+    <Compile Include="../../src/XiaoYang.AutoCADPlugin/WheelIconLibraryDialog.cs" Link="WheelIconLibraryDialog.cs" />
+    <Compile Include="../../src/XiaoYang.AutoCADPlugin/CommandIconImage.cs" Link="CommandIconImage.cs" />
+  </ItemGroup>
+</Project>

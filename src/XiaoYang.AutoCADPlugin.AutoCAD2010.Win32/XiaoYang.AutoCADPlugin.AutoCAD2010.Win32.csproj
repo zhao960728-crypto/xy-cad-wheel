@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net35</TargetFramework><UseWindowsForms>true</UseWindowsForms><UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable><PlatformTarget>x86</PlatformTarget>
+    <AssemblyName>MrZ.XiaoYangRadialMenu.AutoCAD2010</AssemblyName><RootNamespace>XiaoYang.AutoCADPlugin</RootNamespace>
+    <Version>2.2.0.86</Version><AssemblyVersion>2.2.0.86</AssemblyVersion><FileVersion>2.2.0.86</FileVersion><InformationalVersion>2.2.0.86</InformationalVersion>
+    <LangVersion>latest</LangVersion><NoWarn>$(NoWarn);CS0649;CS8632</NoWarn><EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <DefineConstants>$(DefineConstants);AUTOCAD_LEGACY_EDITOR;AUTOCAD_PRE2013;AUTOCAD_CLR2;AUTOCAD_WIN32</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../XiaoYang.AutoCADPlugin.LegacySupport/LegacyRuntime.cs" />
+    <Compile Include="../XiaoYang.AutoCADPlugin.LegacySupport/LegacyDeferredStartup.cs" />
+    <Compile Include="../XiaoYang.AutoCADPlugin.LegacySupport/LegacyZipArchive.cs" />
+    <Compile Include="../XiaoYang.AutoCADPlugin.LegacySupport/LegacyUpdateDialog.cs" />
+    <Compile Include="../XiaoYang.AutoCADPlugin/Properties/AssemblyInfo.cs" />
+    <PackageReference Include="AutoCAD-2010.Net.Base" Version="1.0.0" PrivateAssets="all" ExcludeAssets="runtime" />
+    <PackageReference Include="Theraot.Core" Version="3.2.11" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <Target Name="PrepareLegacy" BeforeTargets="CoreCompile">
+    <Exec Command="powershell.exe -NoProfile -ExecutionPolicy Bypass -File &quot;$(MSBuildProjectDirectory)\..\XiaoYang.AutoCADPlugin.LegacySupport\prepare-sources.ps1&quot; -OutputDirectory &quot;$(MSBuildProjectDirectory)\obj\legacy-$(Configuration)&quot;" />
+    <ItemGroup><Compile Include="obj/legacy-$(Configuration)/*.cs" /></ItemGroup>
+  </Target>
+</Project>

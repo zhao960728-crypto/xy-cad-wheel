@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+    <ZwcadYear Condition="'$(ZwcadYear)' == ''">2020</ZwcadYear>
+    <ZwcadApiVersion Condition="'$(ZwcadApiVersion)' == ''">20.20.0</ZwcadApiVersion>
+    <AssemblyName>MrZ.XiaoYangRadialMenu.ZWCAD$(ZwcadYear)</AssemblyName>
+    <RootNamespace>XiaoYang.AutoCADPlugin</RootNamespace>
+    <Version>2.2.0.84</Version>
+    <AssemblyVersion>2.2.0.84</AssemblyVersion>
+    <FileVersion>2.2.0.84</FileVersion>
+    <InformationalVersion>2.2.0.84</InformationalVersion>
+    <LangVersion>latest</LangVersion>
+    <NoWarn>$(NoWarn);CS0649;CS8632</NoWarn>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <DefineConstants>$(DefineConstants);ZWCAD;AUTOCAD_LEGACY_APP_CONTEXT;AUTOCAD_LEGACY_EDITOR</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\XiaoYang.AutoCADPlugin\*.cs" Link="%(Filename)%(Extension)" />
+    <Compile Include="..\XiaoYang.AutoCADPlugin\Properties\AssemblyInfo.cs" Link="Properties\AssemblyInfo.cs" />
+    <PackageReference Include="ZWCAD.NetApi" Version="$(ZwcadApiVersion)"
+                      PrivateAssets="all" ExcludeAssets="runtime" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <Target Name="CopyToZwcadPackage" AfterTargets="Build">
+    <PropertyGroup>
+      <PackageOutput>$(MSBuildProjectDirectory)\..\..\packaging\小阳ZWCAD轮盘插件.bundle\Contents\NetFramework48\ZWCAD$(ZwcadYear)</PackageOutput>
+    </PropertyGroup>
+    <MakeDir Directories="$(PackageOutput)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PackageOutput)" />
+    <Copy SourceFiles="$(TargetDir)$(AssemblyName).pdb" DestinationFolder="$(PackageOutput)"
+          Condition="Exists('$(TargetDir)$(AssemblyName).pdb')" />
+  </Target>
+</Project>

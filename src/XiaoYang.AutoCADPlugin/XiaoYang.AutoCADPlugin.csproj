@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>MrZ.XiaoYangRadialMenu.AutoCAD2026</AssemblyName>
+    <RootNamespace>XiaoYang.AutoCADPlugin</RootNamespace>
+    <Version>2.2.0.84</Version>
+    <AssemblyVersion>2.2.0.84</AssemblyVersion>
+    <FileVersion>2.2.0.84</FileVersion>
+    <InformationalVersion>2.2.0.84</InformationalVersion>
+    <LangVersion>latest</LangVersion>
+    <NoWarn>$(NoWarn);CS0649;CS8632</NoWarn>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoCAD.NET" Version="25.1.0" PrivateAssets="all" ExcludeAssets="runtime" />
+  </ItemGroup>
+  <Target Name="CopyToBundle" AfterTargets="Build">
+    <PropertyGroup>
+      <BundleOutput>$(MSBuildProjectDirectory)\..\..\packaging\XY-CAD-H.bundle\Contents\Net8</BundleOutput>
+    </PropertyGroup>
+    <MakeDir Directories="$(BundleOutput)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(BundleOutput)" />
+    <Copy SourceFiles="$(TargetDir)$(AssemblyName).pdb" DestinationFolder="$(BundleOutput)" Condition="Exists('$(TargetDir)$(AssemblyName).pdb')" />
+  </Target>
+</Project>

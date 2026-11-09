@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType><TargetFramework>net48</TargetFramework><UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable><PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>XYCAD.LegacyUpdater</AssemblyName><RootNamespace>XiaoYang.AutoCADPlugin</RootNamespace>
+    <Version>2.2.0.84</Version><AssemblyVersion>2.2.0.84</AssemblyVersion><FileVersion>2.2.0.84</FileVersion><InformationalVersion>2.2.0.84</InformationalVersion>
+    <LangVersion>latest</LangVersion><EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="../XiaoYang.AutoCADPlugin/PluginUpdateService.cs" />
+    <Compile Include="../XiaoYang.AutoCADPlugin/PluginUpdateDialog.cs" />
+    <Compile Include="../XiaoYang.AutoCADPlugin/PluginUpdateHandoff.cs" />
+    <Compile Include="../XiaoYang.AutoCADPlugin/LanzouUpdateSource.cs" />
+    <Compile Include="../XiaoYang.AutoCADPlugin/JsonCompat.cs" />
+    <Compile Include="../XiaoYang.AutoCADPlugin/RuntimeCompat.cs" />
+    <Compile Include="../XiaoYang.AutoCADPlugin/Logger.cs" />
+    <Compile Include="../XiaoYang.AutoCADPlugin/PluginPaths.cs" />
+    <Compile Include="../XiaoYang.AutoCADPlugin/ProductMetadata.cs" />
+    <Reference Include="System.Net.Http" /><Reference Include="System.Web.Extensions" />
+    <Reference Include="System.IO.Compression" /><Reference Include="System.IO.Compression.FileSystem" />
+  </ItemGroup>
+  <Target Name="CopyToBundle" AfterTargets="Build">
+    <PropertyGroup><BundleOutput>$(MSBuildProjectDirectory)\..\..\packaging\XY-CAD-H.bundle\Contents\NetFramework35</BundleOutput></PropertyGroup>
+    <MakeDir Directories="$(BundleOutput)" />
+    <Copy SourceFiles="$(TargetPath);$(TargetPath).config;$(MSBuildProjectDirectory)\..\XiaoYang.AutoCADPlugin.LegacySupport\Theraot.Core.LICENSE.txt" DestinationFolder="$(BundleOutput)" />
+  </Target>
+</Project>

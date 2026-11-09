@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType><TargetFramework>net35</TargetFramework><UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>x86</PlatformTarget><LangVersion>latest</LangVersion><Nullable>disable</Nullable>
+    <AssemblyName>XYCAD.AutoCAD2010.Win32.Setup</AssemblyName>
+    <Version>2.2.0.86</Version><AssemblyVersion>2.2.0.86</AssemblyVersion><FileVersion>2.2.0.86</FileVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../XiaoYang.AutoCADPlugin.LegacySupport/LegacyZipArchive.cs" />
+    <EmbeddedResource Include="$(PayloadArchive)" LogicalName="payload.zip" />
+  </ItemGroup>
+  <Target Name="RequirePayload" BeforeTargets="PrepareForBuild">
+    <Error Condition="!Exists('$(PayloadArchive)')" Text="Pass a verified PayloadArchive to build the Win32 installer." />
+  </Target>
+</Project>

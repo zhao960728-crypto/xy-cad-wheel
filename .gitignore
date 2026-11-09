@@ -1,0 +1,29 @@
+# Build output and local state
+[Bb]in/
+[Oo]bj/
+.vs/
+dist/
+work/
+artifacts/
+TestResults/
+results/
+local-install/
+Data/
+Logs/
+*.user
+*.suo
+*.log
+*.trx
+*.dll
+*.exe
+*.pdb
+*.zip
+*.xylpbackup
+.reasonix/
+.workbuddy-ai/
+
+# Generated bundle payloads
+/packaging/XY-CAD-H.bundle/Contents/NetFramework35/
+/packaging/XY-CAD-H.bundle/Contents/Resources/Contact/
+/packaging/小阳ZWCAD轮盘插件.bundle/
+/packaging/update-feed/

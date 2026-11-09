@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <DefineConstants>EXTENSION_SELECTION_TEST</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Stubs.cs" />
+    <Compile Include="ExtensionSelectionProgram.cs" />
+    <Compile Include="../../src/XiaoYang.AutoCADPlugin/ExtensionLoadService.cs" Link="ExtensionLoadService.cs" />
+  </ItemGroup>
+</Project>

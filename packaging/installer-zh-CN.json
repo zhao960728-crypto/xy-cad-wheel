@@ -1,0 +1,9 @@
+﻿{
+  "Title": "小阳CAD轮盘插件一键安装",
+  "RunningPrompt": "检测到 AutoCAD 正在运行：\r\n\r\n{0}\r\n\r\n选择“是”将强制关闭这些进程并继续安装。\r\n未保存的图纸会丢失，请先确认已经保存。\r\n\r\n是否强制关闭并安装？",
+  "Cancelled": "用户取消安装，未关闭 AutoCAD，也未修改插件文件。",
+  "StopFailed": "无法强制关闭 AutoCAD。请以相同或更高权限运行安装程序：{0}",
+  "StopTimeout": "等待 AutoCAD 退出超时，安装已停止。",
+  "NoCompatible": "未检测到受支持的 AutoCAD。\r\n\r\n当前安装包支持 AutoCAD 2010–2012 x64（需 .NET Framework 3.5，独立更新组件需 4.8）、AutoCAD 2013–2024 x64（需 .NET Framework 4.8）、AutoCAD 2025–2026 x64（.NET 8）以及 AutoCAD 2027 x64（.NET 10）。",
+  "Success": "小阳CAD轮盘插件 {0} 安装成功。\r\n\r\n插件、配置和日志均保存在解压目录：\r\n{1}\r\n\r\n请不要移动或删除该文件夹。启动受支持的 AutoCAD 后可使用：\r\nXYLP：打开轮盘\r\nXYLPSZ：设置命令和轮盘\r\nXYLPZJ：重新自检"
+}
