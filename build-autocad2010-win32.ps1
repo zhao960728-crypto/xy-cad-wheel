@@ -94,7 +94,7 @@ $guide = @"
 验证范围：32 位 CLR 2 运行、配置/Excel/设置页、安装事务和包抽取另有构建记录；本机没有 AutoCAD 2010 32 位宿主，实际加载、鼠标触发和 CAD 命令仍需在目标机验收。
 "@
 Write-Utf8 (Join-Path $staging '使用说明.txt') $guide
-Copy-Item -LiteralPath (Join-Path $root 'LICENSE') -Destination $staging
+Copy-Item -LiteralPath (Join-Path $root 'LICENSE'), (Join-Path $root 'LICENSE-SOURCE.txt') -Destination $staging
 & (Join-Path $root 'tests\powershell2-package-parse.ps1') -PackageRoot $staging
 Compress-Archive -Path (Join-Path $staging '*') -DestinationPath $archive -CompressionLevel Optimal
 dotnet build (Join-Path $root 'src\XiaoYang.Installer.Legacy32\XiaoYang.Installer.Legacy32.csproj') -c Release "-p:PayloadArchive=$archive"

@@ -151,7 +151,7 @@ Get-ChildItem -LiteralPath $installerTemplates -File | ForEach-Object {
     Copy-Item -LiteralPath $_.FullName -Destination (Join-Path $distFolder $_.Name) -Force
 }
 Copy-Item -LiteralPath $templateWorkbook -Destination (Join-Path $distFolder (Split-Path -Leaf $templateWorkbook)) -Force
-Copy-Item -LiteralPath (Join-Path $root 'LICENSE') -Destination $distFolder -Force
+Copy-Item -LiteralPath (Join-Path $root 'LICENSE'), (Join-Path $root 'LICENSE-SOURCE.txt') -Destination $distFolder -Force
 
 $forbidden = @(Get-ChildItem -LiteralPath $distFolder -Recurse -File | Where-Object {
     $_.FullName -match '\\(Data|Logs|work|tests)(\\|$)' -or
