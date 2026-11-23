@@ -237,7 +237,7 @@ Copy-Item -LiteralPath $template -Destination $staging -Force
 $stagingGuide = Join-Path $staging $guideName
 [IO.File]::Copy($usageGuide, $stagingGuide, $true)
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'README.md') -Destination $staging -Force
-Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'LICENSE'), (Join-Path $PSScriptRoot 'LICENSE-SOURCE.txt') -Destination $staging -Force
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'LICENSE') -Destination $staging -Force
 if (-not (Test-Path -LiteralPath $bundleGuide) -or -not (Test-Path -LiteralPath $stagingGuide)) {
     throw 'The usage guide was not included in the release package.'
 }

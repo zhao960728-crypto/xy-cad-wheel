@@ -28,7 +28,7 @@
 
 ## 许可证
 
-本项目原创部分可免费使用、商用和闭源二开。对外分发原版或衍生版时，只需注明一次原始仓库地址。 [原始仓库](https://github.com/zhao960728-crypto/xy-cad-wheel) · [授权全文](LICENSE-SOURCE.txt)
+本项目原创部分可免费使用、商用和闭源二开。对外分发原版或衍生版时，只需注明一次原始仓库地址。 [原始仓库](https://github.com/zhao960728-crypto/xy-cad-wheel) · [授权全文](LICENSE)
 
 Theraot.Core 依照其 [许可证](src/XiaoYang.AutoCADPlugin.LegacySupport/Theraot.Core.LICENSE.txt) 分发。AutoCAD 和 ZWCAD 宿主及各自 API 引用适用其自身的许可条款。
 
